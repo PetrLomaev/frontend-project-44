@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-console.log('node bin/brain-games.js\nWelcome to the Brain Games!');
+import readlineSync from 'readline-sync';
+import {userName} from '../src/cli.js';
+console.log('Welcome to the Brain Games!');
+console.log('Hello, ' + userName + '!');
