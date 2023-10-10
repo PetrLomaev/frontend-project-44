@@ -4,3 +4,7 @@
 View the recording brain-even at:
 
     https://asciinema.org/a/hsVgmhscRBbdu1dVkJsvC8cvD
+
+View the recording brain-calc at:
+
+    https://asciinema.org/a/QHDu4StbvRCgJ0p56AYGVkW1Q
