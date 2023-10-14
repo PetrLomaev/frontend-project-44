@@ -30,7 +30,7 @@ const calc = () => {
         if (parseInt(userAnswer) === trueCalcResult) {
             console.log('Correct!');
             sumOfVictory += 1;
-        }else {
+        } else {
             console.log("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was " + "'" + trueCalcResult + "'.\nLet's try again, " + userName + "!");
             break;
         }

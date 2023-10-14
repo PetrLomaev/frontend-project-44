@@ -8,3 +8,7 @@ View the recording brain-even at:
 View the recording brain-calc at:
 
     https://asciinema.org/a/QHDu4StbvRCgJ0p56AYGVkW1Q
+
+View the recording brain-gcd at:
+
+    https://asciinema.org/a/TRXewduIt01HDBpFSoVWP5MVP
