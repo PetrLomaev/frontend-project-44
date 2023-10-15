@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser } from '../src/index.js';
+import { welcomeUser } from '../index.js';
 const userName = welcomeUser();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const parity = () => {
+export const parity = () => {
     let checkParity = '';
     let sumOfVictory = 0;
     for (let i = 0; i <= 3; i += 1) {
@@ -28,4 +28,3 @@ const parity = () => {
         }
     }
 };
-parity();

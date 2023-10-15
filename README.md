@@ -16,3 +16,7 @@ View the recording brain-gcd at:
 View the recording brain-progression at:
 
     https://asciinema.org/a/XRFQD0Gew90OTurJ1MDoQxWK5
+
+View the recording brain-prime at:
+
+    https://asciinema.org/a/VmdJYnF0zM5LLOZBQ0Qxbwp7t
