@@ -12,3 +12,7 @@ View the recording brain-calc at:
 View the recording brain-gcd at:
 
     https://asciinema.org/a/TRXewduIt01HDBpFSoVWP5MVP
+
+View the recording brain-progression at:
+
+    https://asciinema.org/a/XRFQD0Gew90OTurJ1MDoQxWK5
