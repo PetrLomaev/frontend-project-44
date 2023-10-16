@@ -5,3 +5,12 @@ export const welcomeUser = () => {
     console.log('Hello, ' + userName + '!');
     return userName;
 };
+export const getRandomNumber = (begin, end) => {
+    const arrNumbers = [];
+    for (let i = begin; i <= end; i += 1) {
+        arrNumbers.push(i);
+    }
+    const randomIndex = Math.floor(Math.random() * arrNumbers.length);
+    const result = arrNumbers[randomIndex];
+    return result;
+};

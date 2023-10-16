@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { welcomeUser } from '../index.js';
+import { getRandomNumber } from '../index.js';
 const userName = welcomeUser();
 console.log('Find the greatest common divisor of given numbers.');
-let doArrDivisor = () => {
-    let randomNumber1 = Math.floor(Math.random() * 100);
-    let randomNumber2 = Math.floor(Math.random() * 100);
+let getArrDivider = () => {
+    let randomNumber1 = getRandomNumber(0, 100);
+    let randomNumber2 = getRandomNumber(0, 100);
     let maxRandomNumber = Math.max(randomNumber1, randomNumber2);
     const arrDivider = [];
     let trueGCD = 0;
@@ -26,23 +27,23 @@ let doArrDivisor = () => {
     return [randomNumber1, randomNumber2, trueGCD];
 };
 export const gcd = () => {
-    let sumOfVictory = 0;
+    let victoriesCount = 0;
     for (let i = 0; i <= 3; i += 1) {
-        if (sumOfVictory === 3) {
+        if (victoriesCount === 3) {
             console.log('Congratulations, ' + userName + '!');
             break;
         }
-        let arrTrueAnswer = doArrDivisor();
-        let randNum1 = arrTrueAnswer[0];
-        let randNum2 = arrTrueAnswer[1];
+        let arrTrueAnswer = getArrDivider();
+        let randomNumber1 = arrTrueAnswer[0];
+        let randomNumber2 = arrTrueAnswer[1];
         let trueAnswer = arrTrueAnswer[2];
-        console.log(`Question: ${randNum1} ${randNum2}`);
+        console.log(`Question: ${randomNumber1} ${randomNumber2}`);
         let userAnswer = readlineSync.question('Your answer: ');
         if (parseInt(userAnswer) === trueAnswer) {
             console.log('Correct!');
-            sumOfVictory += 1;
+            victoriesCount += 1;
         } else {
-            console.log("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was " + "'" + trueAnswer + "'.\nLet's try again, " + userName + "!");
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${userName}!`);
             break;
         }
     }
