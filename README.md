@@ -29,16 +29,24 @@ View the recording brain-even at:
 
 View the recording brain-calc at:
 
-    https://asciinema.org/a/QHDu4StbvRCgJ0p56AYGVkW1Q
+[![asciicast](https://asciinema.org/a/615881.svg)](https://asciinema.org/a/615881)
+
+    https://asciinema.org/a/cUoWQikkkK0Kqwe8gtcmL0fmO
 
 View the recording brain-gcd at:
 
-    https://asciinema.org/a/TRXewduIt01HDBpFSoVWP5MVP
+[![asciicast](https://asciinema.org/a/615883.svg)](https://asciinema.org/a/615883)
+
+    https://asciinema.org/a/1lourPr9RXRQeksm7mOx5PHGe
 
 View the recording brain-progression at:
 
-    https://asciinema.org/a/XRFQD0Gew90OTurJ1MDoQxWK5
+[![asciicast](https://asciinema.org/a/615884.svg)](https://asciinema.org/a/615884)
+
+    https://asciinema.org/a/ygUzvAsVOy2RgnLruvWXfe3dt
 
 View the recording brain-prime at:
 
-    https://asciinema.org/a/VmdJYnF0zM5LLOZBQ0Qxbwp7t
+[![asciicast](https://asciinema.org/a/615886.svg)](https://asciinema.org/a/615886)
+
+    https://asciinema.org/a/INJT5m0xzns32dS7v39SIWFNV
