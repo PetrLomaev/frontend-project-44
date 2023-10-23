@@ -1,13 +1,10 @@
 import readlineSync from 'readline-sync';
+//import { even } from '../src/games/code_brain-even.js';
+import { gameRound } from '../src/games/code_brain-even.js';
+import { gameRound } from '../src/games/code_brain-calc.js';
 
-export const getRandomNumber = (begin, end) => {
-  const arrNumbers = [];
-  for (let i = begin; i <= end; i += 1) {
-    arrNumbers.push(i);
-  }
-  const randomIndex = Math.floor(Math.random() * arrNumbers.length);
-  const result = arrNumbers[randomIndex];
-  return result;
+export const getRandomNumber = (max) => {
+  return Math.floor(Math.random() * (max + 1));
 };
 
 export const engineBrainGames = (gameDescription, questionForUser, trueAnswer) => {
@@ -26,6 +23,7 @@ export const engineBrainGames = (gameDescription, questionForUser, trueAnswer) =
     if (userAnswer === trueAnswer) {
       console.log('Correct!');
       victoriesCount += 1;
+      [gameDescription, questionForUser, trueAnswer] = gameRound();
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${userName}!`);
       break;
