@@ -3,11 +3,12 @@ import { getRandomNumber, engineBrainGames } from '../index.js';
 const gameRound = () => {
   const randomNumber1 = getRandomNumber(0, 100);
   const randomNumber2 = getRandomNumber(2, 10);
-  const randomIndex = getRandomNumber(0, 9);
+  const amountOfNumbersInProgression = getRandomNumber(6, 10)
+  const randomIndex = getRandomNumber(0, amountOfNumbersInProgression - 1);
   let trueAnswer = 0;
   const arrProgression = [randomNumber1];
   let numberOfProgression = randomNumber1;
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < amountOfNumbersInProgression; i += 1) {
     numberOfProgression += randomNumber2;
     arrProgression.push(numberOfProgression);
   }
