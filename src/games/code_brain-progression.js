@@ -3,7 +3,7 @@ import { getRandomNumber, engineBrainGames } from '../index.js';
 const gameRound = () => {
   const randomNumber1 = getRandomNumber(0, 100);
   const randomNumber2 = getRandomNumber(2, 10);
-  const amountOfNumbersInProgression = getRandomNumber(6, 10)
+  const amountOfNumbersInProgression = getRandomNumber(5, 10);
   const randomIndex = getRandomNumber(0, amountOfNumbersInProgression - 1);
   let trueAnswer = 0;
   const arrProgression = [randomNumber1];
