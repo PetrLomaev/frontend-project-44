@@ -14,7 +14,7 @@ const gameRound = () => {
   }
   trueAnswer = String(arrProgression[randomIndex]);
   arrProgression[randomIndex] = '..';
-  const questionForUser = arrProgression.join(' ');
+  const questionForUser = `Question: ${arrProgression.join(' ')}`;
   return [questionForUser, trueAnswer];
 };
 
