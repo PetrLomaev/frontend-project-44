@@ -1,6 +1,7 @@
-import { getRandomNumber, engineBrainGames } from '../index.js';
+import engineBrainGames from '../index.js';
+import getRandomNumber from '../getRandom.js';
 
-const gameRound = () => {
+const isProgression = () => {
   const randomNumber1 = getRandomNumber(0, 100);
   const randomNumber2 = getRandomNumber(2, 10);
   const amountOfNumbersInProgression = getRandomNumber(5, 10);
@@ -14,7 +15,12 @@ const gameRound = () => {
   }
   trueAnswer = String(arrProgression[randomIndex]);
   arrProgression[randomIndex] = '..';
-  const questionForUser = `Question: ${arrProgression.join(' ')}`;
+  return [arrProgression, trueAnswer];
+};
+
+const gameRound = () => {
+  const [arrProgression, trueAnswer] = isProgression();
+  const questionForUser = `${arrProgression.join(' ')}`;
   return [questionForUser, trueAnswer];
 };
 
