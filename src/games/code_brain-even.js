@@ -1,20 +1,12 @@
 import engineBrainGames from '../index.js';
 import getRandomNumber from '../getRandom.js';
 
-const isEven = () => {
-  const randomNumber = getRandomNumber(0, 100);
-  let trueAnswer = '';
-  if (randomNumber % 2 === 0) {
-    trueAnswer = 'yes';
-  } else {
-    trueAnswer = 'no';
-  }
-  return [randomNumber, trueAnswer];
-};
+const isEven = (number) => (number % 2 === 0);
 
 const gameRound = () => {
-  const [randomNumber, trueAnswer] = isEven();
+  const randomNumber = getRandomNumber(0, 100);
   const questionForUser = `${randomNumber}`;
+  const trueAnswer = isEven(randomNumber) ? 'yes' : 'no';
   return [questionForUser, trueAnswer];
 };
 

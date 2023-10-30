@@ -1,29 +1,22 @@
 import engineBrainGames from '../index.js';
 import getRandomNumber from '../getRandom.js';
 
-const isPrime = () => {
-  const arrFirstPrimeNumbers = [2, 3, 5, 7];
-  let trueAnswer = '';
-  const randomNumber = getRandomNumber(0, 100);
-  for (let i = 0; i < arrFirstPrimeNumbers.length; i += 1) {
-    if (randomNumber === 0 || randomNumber === 1) {
-      trueAnswer = 'no';
-      return [randomNumber, trueAnswer];
-    } if (arrFirstPrimeNumbers.includes(randomNumber)) {
-      trueAnswer = 'yes';
-      return [randomNumber, trueAnswer];
-    } if (randomNumber % arrFirstPrimeNumbers[i] === 0) {
-      trueAnswer = 'no';
-      return [randomNumber, trueAnswer];
-    }
-    trueAnswer = 'yes';
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
   }
-  return [randomNumber, trueAnswer];
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
 const gameRound = () => {
-  const [randomNumber, trueAnswer] = isPrime();
+  const randomNumber = getRandomNumber(0, 100);
   const questionForUser = `${randomNumber}`;
+  const trueAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [questionForUser, trueAnswer];
 };
 

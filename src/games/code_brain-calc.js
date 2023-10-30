@@ -1,27 +1,31 @@
 import engineBrainGames from '../index.js';
 import getRandomNumber from '../getRandom.js';
 
-const isPrime = () => {
-  const arrSymbols = ['+', '-', '*'];
-  let trueAnswer = 0;
-  const randomSymbol = arrSymbols[getRandomNumber(0, arrSymbols.length - 1)];
-  const randomNumber1 = getRandomNumber(0, 100);
-  const randomNumber2 = getRandomNumber(0, 20);
-  if (randomSymbol === '+') {
-    trueAnswer = String(randomNumber1 + randomNumber2);
+const arrSymbols = ['+', '-', '*'];
+const calculate = (firstNum, arithmeticOperation, secondNum) => {
+  let trueAnswer = '';
+  switch (arithmeticOperation) {
+    case '+':
+      trueAnswer = firstNum + secondNum;
+      break;
+    case '-':
+      trueAnswer = firstNum - secondNum;
+      break;
+    case '*':
+      trueAnswer = firstNum * secondNum;
+      break;
+    default:
+      return trueAnswer;
   }
-  if (randomSymbol === '-') {
-    trueAnswer = String(randomNumber1 - randomNumber2);
-  }
-  if (randomSymbol === '*') {
-    trueAnswer = String(randomNumber1 * randomNumber2);
-  }
-  return [randomSymbol, randomNumber1, randomNumber2, trueAnswer];
+  return trueAnswer;
 };
 
 const gameRound = () => {
-  const [randomSymbol, randomNumber1, randomNumber2, trueAnswer] = isPrime();
+  const randomNumber1 = getRandomNumber(0, 100);
+  const randomSymbol = arrSymbols[getRandomNumber(0, arrSymbols.length - 1)];
+  const randomNumber2 = getRandomNumber(0, 20);
   const questionForUser = `${randomNumber1} ${randomSymbol} ${randomNumber2}`;
+  const trueAnswer = calculate(randomNumber1, randomSymbol, randomNumber2);
   return [questionForUser, trueAnswer];
 };
 
