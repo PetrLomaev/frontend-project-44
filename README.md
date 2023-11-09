@@ -22,27 +22,27 @@ Minimum system requirements: operating system that supports the command line ubu
 
 Install:
 
-nmp ci <./bin/file.js> (example: npm ci ./bin/brain-even.js)
+`nmp ci <./bin/file.js>` (example: `npm ci ./bin/brain-even.js`)
 
 
 Link:
 
-npm link <./bin/file.js> (example: npm link ./bin/brain-even.js)
+`npm link <./bin/file.js>` (example: `npm link ./bin/brain-even.js`)
 
 
 Run:
 
-brain-games
+`brain-games`
 
-brain-even
+`brain-even`
 
-brain-calc
+`brain-calc`
 
-brain-gcd
+`brain-gcd`
 
-brain-progression
+`brain-progression`
 
-brain-prime
+`brain-prime`
 
 View the recording brain-even at:
 
